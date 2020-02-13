@@ -70,7 +70,7 @@ extern "C" {
 		PlayerIsRunning = reinterpret_cast<BYTE*>(BaseHandle + 0x2F37CD9);
 		CopyFromAnimGraph = reinterpret_cast <bool (*)(uintptr_t, float*)> (BaseHandle + 0x65B940);
 		CopyToBufferIfAnimGraphDoesnotExist = reinterpret_cast <bool (*)(uintptr_t, float*)> (BaseHandle + 0x6082B0);
-		SafeWrite64(BaseHandle + 0x1664128, (uintptr_t)GetSpeedStruct); //Actor State vTable for PlayerCharacter + 0x40. We override the function that gets the anim graph struct for the player ONLY
+		SafeWrite64(BaseHandle + 0x1664128, (uintptr_t)GetSpeedStruct); //Actor State vTable for PlayerCharacter + 0x48. We override the function that gets the anim graph struct for the player ONLY
 		_MESSAGE("correct load");
 		return true;
 	}
